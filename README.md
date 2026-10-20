@@ -30,6 +30,7 @@ file, matched to your Omarchy theme.
 - **Overdue warning.** The bar icon turns red while any task is overdue.
 - **Matches your theme.** It uses your Omarchy theme's colours and font.
 - **Edit in place.** You can rename a task, change its deadline or delete it.
+- **Custom groups.** Assign tasks to groups and switch the list to a grouped view.
 - **Plain JSON storage.** Your tasks are one readable file that's easy to
   back up or sync.
 
@@ -77,14 +78,18 @@ omarchy plugin enable sendaljpt.taskq
 | Tick or untick a task | Click the task |
 | Set or change a deadline | Hover over the task and click **⏱**, type, then press **Enter** |
 | Rename a task | Hover over the task and click **✎**, edit, then press **Enter** |
+| Assign or change a group | Hover over the task and click **▦**, enter a group name, then press **Enter** |
 | Delete a task | Hover over the task and click **✕** |
+| Group or ungroup the list | Click **Group** in the popup header |
 | Cancel an edit | **Escape** |
 | Remove all finished tasks | Click **Clear completed** |
 | Close the popup | **Escape** |
 | Open the raw task file | Right-click the bar icon |
 
-Open tasks are sorted by deadline, soonest first. Tasks without a deadline
-come next, and completed tasks are listed last.
+By default, open tasks are sorted by deadline, soonest first. Tasks without a
+deadline come next, and completed tasks are listed last. Click **Group** to
+show custom group headings; ungrouped tasks come first, and tasks inside each
+group are ordered by deadline, with completed tasks last.
 
 ### Writing deadlines
 
@@ -158,6 +163,7 @@ It's plain JSON, with deadlines stored as Unix timestamps in milliseconds:
   {
     "id": 1791474834356,
     "title": "Reply to client email",
+    "group": "Work",
     "done": false,
     "created": "2026-10-09T08:00:00.000Z",
     "due": 1791534845008
