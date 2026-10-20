@@ -17,7 +17,8 @@ file, matched to your Omarchy theme.
 - **Lives in the bar.** It shows an icon with the number of open tasks, and
   clicking it opens the list.
 - **Keyboard-first.** The text box is focused as soon as the popup opens, so
-  you can type a task and press Enter.
+  you can type a task and press Enter. The header and input stay visible while
+  you scroll through the task list.
 - **Deadlines in plain words.** Type `tomorrow 9am`, `+2h`, `fri` or `12/10 17:00`.
 - **Live countdown** (`2d 3h 15m left`) coloured by urgency:
 
