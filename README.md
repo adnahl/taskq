@@ -12,6 +12,14 @@ file, matched to your Omarchy theme.
 
 ![TaskQ popup in the Omarchy bar](docs/screenshot.png)
 
+> **This is a fork of [sendaljpt/taskq](https://github.com/sendaljpt/taskq)**,
+> maintained by [adnahl](https://github.com/adnahl). It adds task groups and a
+> reworked panel layout on top of upstream. Install and update from this fork:
+>
+> ```bash
+> omarchy plugin add https://github.com/adnahl/taskq.git --enable
+> ```
+
 ## Features
 
 - **Lives in the bar.** It shows an icon with the number of open tasks, and
@@ -46,7 +54,7 @@ file, matched to your Omarchy theme.
 ## Installation
 
 ```bash
-omarchy plugin add https://github.com/sendaljpt/taskq.git --enable
+omarchy plugin add https://github.com/adnahl/taskq.git --enable
 ```
 
 The icon appears on the right side of the bar. To move it, for example next
@@ -63,7 +71,7 @@ omarchy bar move sendaljpt.taskq --before omarchy.bluetooth
 ### Install by hand
 
 ```bash
-git clone https://github.com/sendaljpt/taskq.git \
+git clone https://github.com/adnahl/taskq.git \
   ~/.config/omarchy/plugins/sendaljpt.taskq
 omarchy-shell shell rescanPlugins
 omarchy plugin enable sendaljpt.taskq
@@ -229,6 +237,15 @@ node -e 'const D = require("/tmp/due.cjs"); const d = D.parse("tomorrow 9am"); c
 Issues and pull requests are welcome. To work on the plugin, clone it into
 `~/.config/omarchy/plugins/sendaljpt.taskq`. The shell reloads plugin code
 when you save, and if a change doesn't appear, run `omarchy restart shell`.
+
+The installed checkout uses this fork as `origin`, so `omarchy plugin update
+sendaljpt.taskq` pulls from here. Upstream is kept as a second remote:
+
+```bash
+git remote -v                          # origin = this fork, upstream = sendaljpt/taskq
+git fetch upstream
+git log upstream/main..main             # commits that are only in the fork
+```
 
 ## License
 
